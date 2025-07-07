@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Entire container -->
-    <div class="container">
+    <section class="container">
         <h1>Expense Tracker</h1>
         <!-- Income section -->
         <div class="section">
@@ -50,7 +50,38 @@
                 <button onclick="addExpense()">Add Expense</button>
             </div>
         </div>
-    </div>
+
+        <!-- Transaction history section -->
+         <div class="table-container">
+            <h2>Transaction History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount (₦)</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-history">
+                    <!-- All transaction history will appear here -->
+                </tbody>
+            </table>
+         </div>
+         <!-- Budget summary section -->
+         <div class="summary">
+            <h2>Budget Summary</h2>
+            <p>Total Income: ₦ <span id="total-income">0</span></p>
+            <p>Total Expenses: ₦ <span id="total-expenses">0</span></p>
+            <p>Balance: ₦ <span id="balance">0</span></p>
+         </div>
+
+         <!-- Clear button section -->
+          <div class="clear-button-group">
+            <button onclick="clearALL()">Clear All</button>
+          </div>
+    </section>
 
 
 
