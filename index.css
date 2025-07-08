@@ -2,6 +2,7 @@
 :root{
     --primary-color: #f4f4f4;
     --color: white;
+    --secondary-color: rgb(24, 24, 189);
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,4 +60,21 @@ h2 {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+/* Button section */
+.button-group button,
+.clear-button-group button {
+    background-color: var(--secondary-color);
+    color: var(--color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-group button:hover,
+.clear-button-group button:hover{
+    background-color: black;
 }
