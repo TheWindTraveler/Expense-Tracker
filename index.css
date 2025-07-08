@@ -5,6 +5,7 @@
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Body */
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: var(--primary-color);
@@ -24,4 +25,38 @@ body{
     box-shadow: var(--box-shadow);
     max-width: 600px;
     width: 100%;
+}
+
+/* Entire headings */
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Input group, label and select section */
+.input-group{
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input,
+.input-group select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
