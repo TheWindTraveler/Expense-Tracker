@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 /* Container */
@@ -46,14 +46,14 @@ h2 {
     margin-bottom: 15px;
 }
 
-.input-group label {
+.input-group, label {
     display: block;
     margin-bottom: 5px;
     color: #555;
 }
 
-.input-group input,
-.input-group select {
+.input-group, input,
+.input-group, select {
     width: calc(100% - 10px);
     padding: 10px;
     border: 1px solid #ddd;
@@ -72,9 +72,20 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 .button-group button:hover,
 .clear-button-group button:hover{
     background-color: black;
+}
+
+/* Table section */
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
