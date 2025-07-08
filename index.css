@@ -120,3 +120,21 @@ td button{
 td button:hover{
     background-color: rgb(61, 61, 190);
 }
+
+/* Summary section */
+.summary {
+    background-color: #b3c7ff;
+    padding: 15px;
+    border-radius: 3px;
+    text-align: center;
+    color: #333;
+}
+
+.summary p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.summary, span {
+    font-weight: bold;
+}
