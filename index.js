@@ -38,4 +38,27 @@ function addTransaction(description, amount, category) {
         transactionRow.remove();
         updateSummary();
     });
-}
+};
+
+function updateSummary() {
+    let totalExpenses = 0;
+    let totalIncomes = 0;
+
+    const transactions = transactionList.querySelectorAll("tr");
+
+    transactions.forEach(function(transaction) {
+        const amount = parseFloat(transaction.children[2].textContent);
+        const category = transaction.children[1].textContent;
+
+        if (category === 'Income') {
+            totalIncomes += amount;
+        } else {
+            totalExpenses += amount;
+        };
+    });
+
+    totalExpense.textContent = totalExpenses.toFixed(2);
+    totalIncome.textContent = totalExpsenses.toFixed(2);
+    balance.textContent = (totalIncomes - totalExpenses).toFixed(2);
+};
+
