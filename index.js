@@ -11,6 +11,7 @@ const incomeDescriptionInput = document.getElementById("income-description");
 const incomeAmountInput = document.getElementById("income-amount");
 const clearAllInput = document.getElementById("clear-all");
 
+// Income form function
 incomeForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -24,14 +25,15 @@ incomeForm.addEventListener('submit', function(event) {
 
     addTransaction(description, amount, 'Income');
     updateSummary();
-    clearIncomeInputs();
 });
 
+// Clear income function
 function clearIncomeInputs() {
     incomeDescriptionInput.value = '';
     incomeAmountInput.value = '';
 };
 
+// Expense form function
 expenseForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -47,9 +49,9 @@ expenseForm.addEventListener('submit', function(event) {
 
     addTransaction(description, amount, category);
     updateSummary();
-    clearInputs();
 });
 
+// Add transaction function
 function addTransaction(description, amount, category) {
     const transactionRow = document.createElement("tr");
 
@@ -69,6 +71,7 @@ function addTransaction(description, amount, category) {
     });
 };
 
+// Update summary function
 function updateSummary() {
     let totalExpenses = 0;
     let totalIncomes = 0;
@@ -91,6 +94,7 @@ function updateSummary() {
     balance.textContent = (totalIncomes - totalExpenses).toFixed(2);
 };
 
+// Clear all inputs function
 clearAllInput.addEventListener('click', function() {
     // Clear all input fields
     expenseInput.value = '';
