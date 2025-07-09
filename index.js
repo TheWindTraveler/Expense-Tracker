@@ -1,7 +1,7 @@
 const expenseForm = document.getElementById("expense-form");
-const expenseInput = document.getElementById("expense-input");
-const amountInput = document.getElementById("amount-input");
-const categoryInput = document.getElementById("category-input");
+const expenseInput = document.getElementById("expense-description");
+const amountInput = document.getElementById("expense-amount");
+const categoryInput = document.getElementById("expense-category");
 const transactionList = document.getElementById("transaction-list");
 const totalExpense = document.getElementById("total-expense");
 const totalIncome = document.getElementById("balance");
@@ -15,7 +15,9 @@ expenseForm.addEventListener('submit', function(event) {
 
     if (description === '' || isNaN(amount) || amount <= 0) {
         alert('Please enter a valid expense description and amount.')
+        return;
     }
+
 
     addTransaction(description, amount, category);
     updateSummary();
