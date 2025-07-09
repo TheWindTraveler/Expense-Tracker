@@ -25,6 +25,7 @@ incomeForm.addEventListener('submit', function(event) {
 
     addTransaction(description, amount, 'Income');
     updateSummary();
+    clearIncomeInputs()
 });
 
 // Clear income function
@@ -49,7 +50,15 @@ expenseForm.addEventListener('submit', function(event) {
 
     addTransaction(description, amount, category);
     updateSummary();
+    clearExpenseInput()
 });
+
+// Clear expense input
+function clearExpenseInput() {
+    expenseInput.value = '';
+    amountInput.value = '';
+    categoryInput.value = '';
+};
 
 // Add transaction function
 function addTransaction(description, amount, category) {
@@ -111,3 +120,4 @@ clearAllInput.addEventListener('click', function() {
     totalIncome.textContent = '0.00';
     balance.textContent = '0.00';
 });
+
