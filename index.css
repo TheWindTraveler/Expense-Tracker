@@ -148,7 +148,7 @@ td button:hover{
     font-weight: bold;
 }
 
-/* Notification */
+/* Notification section */
 #notification {
     background-color: var(--notification-color);
     color: white;
