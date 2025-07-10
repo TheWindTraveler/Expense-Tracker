@@ -10,27 +10,3 @@ const incomeForm = document.getElementById("income-form");
 const incomeDescriptionInput = document.getElementById("income-description");
 const incomeAmountInput = document.getElementById("income-amount");
 const clearAllInput = document.getElementById("clear-all");
-
-
-
-// Show income notification
-function showIncomeNotification(message) {
-    const notification = document.getElementById("income-notification");
-    notification.textContent = message;
-    notification.classList.remove("hidden");
-
-    setTimeout(function() {
-        notification.classList.add("hidden");
-    }, 2000);
-}
-
-// Show expense notification
-function showExpenseNotification(message) {
-    const notification = document.getElementById("expense-notification");
-    notification.textContent = message;
-    notification.classList.remove("hidden");
-
-    setTimeout(function() {
-        notification.classList.add("hidden");
-    }, 2000);
-}
