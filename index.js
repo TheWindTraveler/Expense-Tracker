@@ -102,7 +102,18 @@ function updateSummary() {
 
     totalExpense.textContent = totalExpenses.toFixed(2);
     totalIncome.textContent = totalIncomes.toFixed(2);
-    balance.textContent = (totalIncomes - totalExpenses).toFixed(2);
+
+    const currentBalance = totalIncomes - totalExpenses;
+    balance.textContent = currentBalance.toFixed(2);
+
+    // Positive and negative class
+    if (currentBalance >= 0) {
+        balance.classList.remove('negative')
+        balance.classList.add("positive");
+    } else {
+        balance.classList.remove('positive');
+        balance.classList.add('negative');
+    };
 };
 
 // Clear all inputs function
