@@ -4,6 +4,7 @@
     --color: white;
     --secondary-color: rgb(24, 24, 189);
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --notification-color: #28a745;
 }
 
 /* Body */
@@ -145,4 +146,18 @@ td button:hover{
 
 .summary, span {
     font-weight: bold;
+}
+
+/* Notification */
+#notification {
+    background-color: var(--notification-color);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.hidden{
+    display: none;
 }
