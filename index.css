@@ -149,7 +149,7 @@ td button:hover{
 }
 
 /* Notification section */
-#notification {
+#income-notification, #expense-notification {
     background-color: var(--notification-color);
     color: white;
     padding: 10px;

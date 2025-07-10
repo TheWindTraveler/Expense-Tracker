@@ -24,7 +24,7 @@ incomeForm.addEventListener('submit', function(event) {
     }
 
     addTransaction(description, amount, 'Income');
-    showNotification("Income added successfully!");
+    showIncomeNotification("Income added successfully!");
     updateSummary();
     clearIncomeInputs()
 });
@@ -50,7 +50,7 @@ expenseForm.addEventListener('submit', function(event) {
 
 
     addTransaction(description, amount, category);
-    showNotification("Transaction added successfully!");
+    showExpenseNotification("Transaction added successfully!");
     updateSummary();
     clearExpenseInput()
 });
@@ -123,8 +123,9 @@ clearAllInput.addEventListener('click', function() {
     balance.textContent = '0.00';
 });
 
-function showNotification(message) {
-    const notification = document.getElementById("notification");
+// Show income notification
+function showIncomeNotification(message) {
+    const notification = document.getElementById("income-notification");
     notification.textContent = message;
     notification.classList.remove("hidden");
 
@@ -133,3 +134,13 @@ function showNotification(message) {
     }, 2000);
 }
 
+// Show expense notification
+function showExpenseNotification(message) {
+    const notification = document.getElementById("expense-notification");
+    notification.textContent = message;
+    notification.classList.remove("hidden");
+
+    setTimeout(function() {
+        notification.classList.add("hidden");
+    }, 2000);
+}

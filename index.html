@@ -9,13 +9,15 @@
 <body>
     <!-- Entire container -->
     <section class="container">
-        <!-- Notification section -->
-        <div id="notification" class="hidden"></div>
         <!-- Expense Tracker -->
         <h1>Expense Tracker</h1>
         <!-- Income section -->
         <form id="income-form" class="section">
             <h2>Income</h2>
+            <!-- Notification section -->
+            <div id="income-notification" class="hidden"></div>
+
+            <!-- Input group -->
             <div class="input-group">
                 <label for="income-description">Description</label>
                 <input type="text" id="income-description" placeholder="e.g. freelance  project income">
@@ -32,6 +34,8 @@
         <!-- Expenses section -->
         <form id="expense-form" class="section">
             <h2>Expenses</h2>
+             <!-- Notification section -->
+            <div id="expense-notification" class="hidden"></div>
             <div class="input-group">
                 <label for="expense-description">Description</label>
                 <input type="text" id="expense-description" placeholder="e.g. rent">
