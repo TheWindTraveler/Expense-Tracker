@@ -6,7 +6,7 @@ function renderTransaction(description, amount, category) {
         <td>${category}</td>
         <td>${amount.toFixed(2)}</td>
         <td>${category === "Income" ? "Income" : "Expense"}</td>
-        <td><button class="delete-btn">Delete</button></td>
+        <td><button class="delete-btn"><i class="fas fa-trash"></i></button></td>
     `;
 
     transactionList.appendChild(transactionRow);
